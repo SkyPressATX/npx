@@ -7,6 +7,9 @@ RUN mkdir -p /app && \
 # Set Working Directory
 WORKDIR /app
 
+# Install git
+RUN apk add --no-cache git openssh
+
 # Install npx globally
 RUN su node && \
   npm install -g npx
