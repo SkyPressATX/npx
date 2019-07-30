@@ -4,7 +4,7 @@ FROM node:12-alpine
 RUN mkdir -p /app
 
 # Set folder permissions for node user
-RUN chown -R node:node /app /usr/local/lib/node_modules
+RUN chown -R node:node /app
 
 # Install git
 RUN apk add --no-cache git openssh
