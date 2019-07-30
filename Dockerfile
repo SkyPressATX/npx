@@ -6,6 +6,9 @@ RUN mkdir -p /app
 # Set folder permissions for node user
 RUN chown -R node:node /app /usr/local/lib/node_modules
 
+# Install git
+RUN apk add --no-cache git openssh
+
 # Install npx globally
 RUN npm install -g npx
 
