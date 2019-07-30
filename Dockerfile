@@ -1,15 +1,16 @@
 FROM node:12-alpine
 
 # Create Working Directory
-RUN mkdir -p /app && \
-  chown node:node /app
+RUN mkdir -p /app
+
+# Set folder permissions for node user
+RUN chown -R node:node /app /usr/local/lib/node_modules
+
+# Install npx globally
+RUN npm install -g npx
 
 # Set Working Directory
 WORKDIR /app
-
-# Install npx globally
-RUN su node && \
-  npm install -g npx
 
 # Use the node user
 USER node
