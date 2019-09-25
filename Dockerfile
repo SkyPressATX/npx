@@ -7,7 +7,7 @@ RUN mkdir -p /app
 RUN chown -R node:node /app
 
 # Install git
-RUN apk add --no-cache git openssh python
+RUN apk add --no-cache git openssh python make g++
 
 # Install npx globally
 RUN npm install -g npx
