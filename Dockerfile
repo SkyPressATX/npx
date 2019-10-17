@@ -1,4 +1,4 @@
-FROM node:11-alpine
+FROM node:12-alpine
 
 # Create Working Directory
 RUN mkdir -p /app
